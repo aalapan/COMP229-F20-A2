@@ -1,9 +1,27 @@
 <%- include('./partials/header.ejs') -%>
 <%- include('./partials/mainnav.ejs') -%>
 
-<main>
-  <!--JUMBOTRON-->
-  <div class="jumbotron"></div>
+<main class="container">
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h3 class="display-4"><%= title %></h3>
+    </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-6">
+      <h2 class="display-5">Aileen Nicole Alapan, 301108374</h2>
+
+      <a href="/About" alt="About Me">
+        <img src="./Assets/Images/aboutme.jpg" alt="Resume" height="200"> About Me (click me)
+      </a>
+
+      <p>I strive to constantly be the best version of myself, to not be complacent and to always do the thing that will me happy.</p>
+
+      <hr class="my-4">
+    </div>
+  </div>
 </main>
 
 <%- include('./partials/bottomnav.ejs') -%>
