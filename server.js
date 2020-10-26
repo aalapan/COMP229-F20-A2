@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var app = require('./config/app');
-var debug = require('debug')('assignment02:server');
+var app = require('./server/config/app');
+var debug = require('debug')('A2:server');
 var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
