@@ -4,8 +4,10 @@ var app = require('./server/config/app');
 var debug = require('debug')('A2:server');
 var http = require('http');
 
+
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
 
 var server = http.createServer(app);
 
