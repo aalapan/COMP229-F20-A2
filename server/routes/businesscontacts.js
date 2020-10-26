@@ -16,6 +16,18 @@ function requireAuth(req, res, next)
 let listController = require('../controllers/businesscontacts')
 router.get('/', requireAuth, listController.displayContactList);
 
+router.get('/', contactController.displayContactList);
+
+router.get('/add', requireAuth,contactController.displayAddPage);
+
+router.post('/add', requireAuth,contactController.processAddPage);
+
+router.get('/edit/:id', requireAuth,contactController.displayEditPage);
+
+router.post('/edit/:id', requireAuth,contactController.processEditPage);
+
+router.get('/delete/:id', requireAuth,contactController.performDelete);
+
 router.get('/update/:id', requireAuth, listController.displayUpdatePage);
 
 router.post('/update/:id', requireAuth, listController.processUpdatePage);
