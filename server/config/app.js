@@ -22,21 +22,21 @@ mongoDB.once('open',()=>
    console.log('MongoDB is connected');
 });
 
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-let listsRouter = require('../routes/clist');
+let indexRouter = require('/routes/index');
+let usersRouter = require('/routes/users');
+let listsRouter = require('/routes/businesscontacts');
 
 let app = express();
 
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../node_modules')));
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/node_modules')));
 
 app.use(session({
   secret: "SomeSecret",
