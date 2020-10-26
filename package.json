@@ -23,6 +23,7 @@
     "mongoose": "^5.10.10",
     "morgan": "~1.9.1",
     "passport": "^0.4.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "session": "^0.1.0"
   }
 }
