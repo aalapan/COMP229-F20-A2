@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') -%>
+<%- include('../partials/main_nav.ejs')-%>
+
+    <div class="container">
+     <div class="row">
+        <div class="offset-md-3 col-md-6">
+        <h1 class="text-center">Update List</h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for=""> Name </label>
+                    <input type="text" 
+                    name="name"
+                    class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the name" 
+                    value="<%= conList.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Contact Number </label>
+                    <input type="text" class="form-control" 
+                    name="number"
+                    id="numberTextField"
+                    placeholder="1234567890" 
+                    value="<%= conList.number %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">E-mail Address</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    name="email"
+                    placeholder="xyz@gmail.com" 
+                    value="<%= conList.email %>"
+                    required>
+                </div>
+
+                <label><button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"> Submit</i>
+                </button></label>
+                 <label><a href="/update-businesscontacts" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a></label>
+                
+            </form>
+        </div>
+     </div>
+ </div>
+
+
+<%- include('../partials/bottom_nav.ejs')-%>
+<%- include('../partials/footer.ejs') -%>
