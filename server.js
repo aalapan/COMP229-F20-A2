@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var app = require('./server/config/app');
-var debug = require('debug')('A2:server');
+var debug = require('debug')('A2npm:server');
 var http = require('http');
 
 
